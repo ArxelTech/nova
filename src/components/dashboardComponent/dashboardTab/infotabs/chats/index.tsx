@@ -54,7 +54,7 @@ function Chats(props: Props) {
     ]
 
     return (
-        <Box w={"full"} overflowY={"auto"} position={"relative"} sx={{ flex: '1 0 auto' }} gap={"28px"} flexDirection={"column"} >
+        <Box w={"full"} overflowY={"auto"} position={"relative"} display={"flex"} sx={{ flex: '1 0 auto' }} gap={"28px"} flexDirection={"column"} >
             {chats?.map((item: any, index: number)=> { 
                 return( 
                     <Flex key={index} w={"full"} gap={"10px"} justifyContent={item?.by !== "self" ? "": "end"} >

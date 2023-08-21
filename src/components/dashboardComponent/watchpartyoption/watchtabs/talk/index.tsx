@@ -24,7 +24,7 @@ function TalkTab(props: Props) {
                 <Box w={"46px"} h={"46px"} rounded={"full"} bg={"red.300"} />
                 <Box w={"46px"} h={"46px"} rounded={"full"} bg={"red.300"} /> 
             </Flex>
-            <Button height={"36px"} px="20px" mt={"4px"} w="fit-content" rounded="8px" _hover={{}} border="1px" bg="transparent" fontSize={"14px"} color="white" variant='outline' >
+            <Button height={"36px"} px="20px" mt={"4px"} w="fit-content" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} border="1px" bg="transparent" fontSize={"14px"} color="white" variant='outline' >
                 Leave Conversation
             </Button>
         </Box>

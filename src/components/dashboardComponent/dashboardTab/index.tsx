@@ -16,10 +16,10 @@ function DashboardTab(props: Props) {
                 <WatchPartyOption />
                 <Box mt="20px"  w="100%" bg="brand.tabcolor" rounded={"10px"} px={"7px"} py={"6px"} >
                     <Flex gap={"6px"} >
-                        <Button onClick={()=> setTab(false)} _hover={{}} h="50px" w="full" bg={!tab ? "brand.btnbg" : ""} color={"brand.gray200"} rounded={"10px"} >
+                        <Button onClick={()=> setTab(false)} _hover={{ backgroundColor: "brand.btnbg"}} _focus={{ backgroundColor: "brand.btnbg"}} h="50px" w="full" bg={!tab ? "brand.btnbg" : ""} color={"brand.gray200"} rounded={"10px"} >
                             Chat
                         </Button>
-                        <Button onClick={()=> setTab(true)} _hover={{}} h="50px" display="flex" alignItems="center" gap="4px" w="full" bg={tab ? "brand.btnbg" : ""} color={"brand.gray200"} rounded={"10px"} >
+                        <Button onClick={()=> setTab(true)} _hover={{ backgroundColor: "brand.btnbg"}} _focus={{ backgroundColor: "brand.btnbg"}} h="50px" display="flex" alignItems="center" gap="4px" w="full" bg={tab ? "brand.btnbg" : ""} color={"brand.gray200"} rounded={"10px"} >
                             Friends <Box  display="flex" ml="5px" alignItems="center" rounded="full" justifyContent="center" bg={"brand.base"} fontSize={"14px"} w="24px" h="24px" color={"brand.gray200"} >5</Box>
                         </Button>
                     </Flex>

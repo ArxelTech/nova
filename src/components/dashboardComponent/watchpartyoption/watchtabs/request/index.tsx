@@ -25,10 +25,10 @@ function RequestTab(props: Props) {
                     <Text textColor={"brand.gray300"} display="flex" fontFamily="400" ><Text mr="5px" fontFamily="700" color="white" >Mel</Text> wants to join the watch party</Text>
                 </Flex>
                 <Flex gap="8px" mt="20px" >
-                    <Button py="6px" px="20px" rounded="8px" _hover={{}} border="1px" bg="transparent" color="#D4FFF5" variant='outline' >
+                    <Button py="6px" px="20px" rounded="8px" _hover={{ backgroundColor: "brand.black"}} _focus={{ backgroundColor: "brand.black"}} border="1px" bg="transparent" color="#D4FFF5" variant='outline' >
                         Yes
                     </Button>
-                    <Button py="6px" px="20px" rounded="8px" _hover={{}} border="1px" bg="transparent" color="#FFCFCF" variant='outline' >
+                    <Button py="6px" px="20px" rounded="8px" _hover={{ backgroundColor: "brand.black"}} _focus={{ backgroundColor: "brand.black"}} border="1px" bg="transparent" color="#FFCFCF" variant='outline' >
                         No
                     </Button>
                 </Flex>

@@ -19,7 +19,7 @@ function ShareTab(props: Props) {
             <Box pt={"19px"} px={"22px"}  >
                 <Text fontFamily={"500"} color={"brand.base"} fontSize={"sm"} >https://www.getnova.app/in/902829</Text>
             
-                <Button height={"36px"} px="20px" mt={"10px"} w="fit-content" rounded="8px" _hover={{}} border="1px" bg="transparent" fontSize={"14px"} color="white" variant='outline' >
+                <Button height={"36px"} px="20px" mt={"10px"} w="fit-content" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} border="1px" bg="transparent" fontSize={"14px"} color="white" variant='outline' >
                     Copy Link
                 </Button>
             </Box>
