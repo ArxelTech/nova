@@ -29,7 +29,7 @@ function DashboardTab(props: Props) {
             {!tab && ( 
                 <Box w="full" bg={"brand.black"} position={"sticky"} mt={"auto"} py={"20px"} bottom={"0px"}  > 
                     <InputGroup> 
-                        <Input w={"full"} height={"50px"} placeholder='Enter amount' borderColor={"gray.500"} focusBorderColor={"gray.500"} borderRadius={"8px"} />
+                        <Input w={"full"} height={"50px"} placeholder='Enter amount' color={"white"} borderColor={"gray.500"} focusBorderColor={"gray.500"} borderRadius={"8px"} />
                         <InputRightElement display={"flex"} gap={"6px"} width={"auto"} pr={"10px"} height={"50px"}>
                             <svg role='button' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="vuesax/outline/emoji-happy">
