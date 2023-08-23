@@ -34,7 +34,7 @@ function VerifyEmail(props: Props) {
                         </PinInput>
                     </Flex> 
                     <Box width={"full"} display={"flex"} mt={"6px"} gap={"21px"} alignItems={"center"} >
-                        <Button bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Verify Code</Button>
+                        <Button type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Verify Code</Button>
                         <Link href="" color={"brand.base"} fontFamily={"500"} >Resend Code</Link>
                     </Box>
                 </Box>

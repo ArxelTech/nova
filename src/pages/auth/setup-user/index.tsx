@@ -36,7 +36,7 @@ function SetupUser(props: Props) {
                             } />
                         </Box> 
                         <Box width={"full"} display={"flex"} mt={"6px"} gap={"21px"} alignItems={"center"} >
-                            <Button bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Continue</Button>
+                            <Button type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Continue</Button>
                             {/* <Link href="/forgot-password" color={"brand.base"} fontFamily={"500"} >Forgot Password</Link> */}
                         </Box>
                     </Box>

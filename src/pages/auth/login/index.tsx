@@ -31,7 +31,7 @@ function LoginPage(props: Props) {
                             <InputComponent type="password" placeholder="*************" right={true} />
                         </Box>
                         <Box width={"full"} display={"flex"} mt={"6px"} gap={"21px"} alignItems={"center"} >
-                            <Button bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Log In</Button>
+                            <Button type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Log In</Button>
                             <Link href="/forgot-password" color={"brand.base"} fontFamily={"500"} >Forgot Password</Link>
                         </Box>
                     </Box>

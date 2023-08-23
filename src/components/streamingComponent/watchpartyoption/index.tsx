@@ -7,7 +7,7 @@ interface Props {}
 function WatchPartyOption(props: Props) {
     const {} = props
 
-    const [tab, setTab] = React.useState(0)
+    const [tab, setTab] = React.useState(-1)
 
     const clickHandler =(item: number)=> {
         if(item === tab){

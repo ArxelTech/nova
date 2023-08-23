@@ -1,14 +1,13 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import Dashboard from './pages/dashboard'
+import Streaming from './pages/streaming'
 import LoginPage from './pages/auth/login';
 import RegistrationPage from './pages/auth/register';
 import ForgotPassword from './pages/auth/forgot-password';
 import VerifyEmail from './pages/auth/verifyemail';
 import SetupUser from './pages/auth/setup-user';
+import Dashboard from './pages/dashboard';
+import JoinParty from './pages/joinparty';
 
 function App() {
 
@@ -27,6 +26,8 @@ function App() {
         <Route path="forgot-password" element={<ForgotPassword />}  />
 
         <Route path='dashboard' element={<Dashboard />}  />
+        <Route path='join-party' element={<JoinParty />}  />
+        <Route path='streaming' element={<Streaming />}  />
       </Route>
     )
 

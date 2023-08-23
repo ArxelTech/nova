@@ -38,7 +38,7 @@ function RegistrationPage(props: Props) {
                             <InputComponent type="password" placeholder="*************" right={true} />
                         </Box>
                         <Box width={"full"} display={"flex"} mt={"6px"} gap={"21px"} alignItems={"center"} >
-                            <Button bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Create Account</Button> 
+                            <Button type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Create Account</Button> 
                         </Box>
                     </Box>
                 </form>
