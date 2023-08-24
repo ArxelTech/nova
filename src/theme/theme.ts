@@ -11,7 +11,8 @@ export const colorPallette = {
     base: "#5A20D4",
     tabcolor: "#6D6D6D0F",
     chat: "#253240",
-    online: "#27ECA5" 
+    online: "#27ECA5" ,
+    
 }
 
 const colors = {

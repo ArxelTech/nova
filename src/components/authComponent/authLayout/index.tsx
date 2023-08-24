@@ -53,7 +53,12 @@ function AuthLayout(props: Props) {
                     <Link color={"brand.base"} href={link} fontFamily={"500"} >{linklabel}</Link>
                 </Flex>
                 {children}
-                <Image src={"/images/TV.png"} width={"125px"} position={linklabel === "Login" ? "fixed" : "absolute"} zIndex={"30"} bottom={"0px"} right={"0px"}  />
+                {title !== "Joining Watch Party" && ( 
+                    <Image src={"/images/TV.png"} width={"125px"} position={linklabel === "Login" ? "fixed" : "absolute"} zIndex={"30"} bottom={"0px"} right={"0px"}  />
+                )}
+                {title === "Joining Watch Party" && ( 
+                    <Image src={"/images/TV.png"} width={"125px"} position={linklabel === "Login" ? "fixed" : "absolute"} zIndex={"30"} bottom={"0px"} left={"0px"}  />
+                )}
             </Flex>
         </Box>
     )
