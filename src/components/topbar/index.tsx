@@ -38,7 +38,7 @@ function Topbar(props: Props) {
             )}
             {user && (
                 <Flex gap="8px" >
-                    <Button color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor={"brand.base"} rounded="8px" _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}} bg={"brand.base"} >Start A Watch Party</Button>
+                    <Button onClick={()=> navigate.push("/platform")} color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor={"brand.base"} rounded="8px" _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}} bg={"brand.base"} >Start A Watch Party</Button>
                     <Button onClick={()=> navigate.push("/join-party")} color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor="white" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} bg="transparent" >Join A Watch Party</Button>
                 </Flex>
             )}

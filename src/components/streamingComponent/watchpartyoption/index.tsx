@@ -2,10 +2,16 @@ import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react' 
 import WatchTabs from './watchtabs'
 
-interface Props {}
+interface Props {
+    max: any,
+    show: boolean
+}
 
 function WatchPartyOption(props: Props) {
-    const {} = props
+    const {
+        show,
+        max
+    } = props
 
     const [tab, setTab] = React.useState(-1)
 
@@ -15,10 +21,11 @@ function WatchPartyOption(props: Props) {
         } else {
             setTab(item)
         }
+        max(false)
     }
 
     return (
-        <Box>
+        <Box width={"full"} position={"relative"} >
             <Text fontWeight={700} color={"brand.gray200"} >Watch Party Options</Text>
             <Flex mt="24px" justifyContent="space-between" w="full" >
                 <Box display="flex" alignItems="center" flexDirection="column" > 
@@ -83,7 +90,7 @@ function WatchPartyOption(props: Props) {
                     <Text mt="8px" fontSize="14px" fontFamily="400" color={tab === 4 ? "brand.gray200": "brand.inactive"} >Settings</Text>
                 </Box>
             </Flex> 
-            <WatchTabs tab={tab} />
+            <WatchTabs show={show} tab={tab} max={max} />
         </Box>
     )
 }
