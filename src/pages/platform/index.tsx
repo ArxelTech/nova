@@ -1,20 +1,20 @@
 // import React from 'react'
 import { Box, Flex, Grid, Text } from '@chakra-ui/react'
 import DashboardLayout from '../../components/dashboardCompnent/dashboardLayout'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 interface Props {}
 
 function Platform(props: Props) {
     const {} = props
 
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     return (
         <DashboardLayout>
             <Box w={"full"} p={"32px"} overflowY={"auto"} >
                 <Flex alignItems={"center"} gap={"10px"} > 
-                    <Box onClick={()=> navigate("/dashboard")} as="button" > 
+                    <Box onClick={()=> navigate.push("/dashboard")} as="button" > 
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 38.5C30.665 38.5 38.5 30.665 38.5 21C38.5 11.335 30.665 3.5 21 3.5C11.335 3.5 3.5 11.335 3.5 21C3.5 30.665 11.335 38.5 21 38.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M27.125 21H16.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -27,7 +27,7 @@ function Platform(props: Props) {
                     </Box>
                 </Flex>
                 <Flex w={"full"} borderBottom={"1px"} py={"50px"} gap={"32px"} px={"42px"} >
-                    <Box  as={"button"} onClick={()=> navigate("/streaming")}  rounded={"8px"} border={"1px"} _hover={{borderColor:"brand.base"}} py={"19px"} px={"25px"} w={"fit-content"} >
+                    <Box  as={"button"} onClick={()=> navigate.push("/streaming")}  rounded={"8px"} border={"1px"} _hover={{borderColor:"brand.base"}} py={"19px"} px={"25px"} w={"fit-content"} >
                         <svg width="248" height="131" viewBox="0 0 248 131" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_137_1103)">
                                 <path d="M216.704 61.9502L227.916 91.6346C224.611 91.1627 221.309 90.5716 217.947 90.039L211.631 73.6372L205.142 88.6851C201.957 88.1525 198.828 87.9751 195.643 87.5616L207.03 61.5973L196.702 34.9851H206.261L212.042 49.8538L218.239 34.9851H227.914L216.704 61.9502ZM189.153 34.9851H180.479V86.4418C183.312 86.6194 186.261 86.7363 189.153 87.0894V34.9851ZM172.986 85.8508C165.08 85.3201 157.173 84.85 149.09 84.6706V34.9853H157.94V76.292C163.015 76.4092 168.088 76.8209 172.986 77.0569V85.8508ZM139.648 55.1089V63.9594H127.553V84.0813H118.822V34.9851H143.603V43.8356H127.555V55.1091H139.65L139.648 55.1089ZM103.952 43.8356V84.5534C101.001 84.5534 97.993 84.5534 95.1003 84.6706V43.8356H85.9546V34.9851H113.154V43.8356H103.952ZM76.3971 64.4297C72.5038 64.4297 67.9006 64.4297 64.5965 64.6091V77.7668C69.7887 77.4118 74.9809 77.0001 80.2315 76.8227V85.3201L55.747 87.2689V34.9851H80.2299V43.8356H64.5962V55.7565C68.0193 55.7565 73.2701 55.5792 76.3967 55.5792V64.4315L76.3971 64.4297ZM27.3633 59.4728V90.394C24.18 90.7489 21.3459 91.1625 18.3381 91.6346V34.9851H26.7761L38.2805 67.1472V34.9851H47.1317V87.9751C44.0049 88.5077 40.818 88.6851 37.4553 89.1554L27.3633 59.4728Z" fill="#474D55"/>
