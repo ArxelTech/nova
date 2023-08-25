@@ -1,6 +1,8 @@
 import { Box, Flex, Image, Link, Text } from '@chakra-ui/react'
 import Navbar from '../../dashboardCompnent/dashboardLayout/component/navbar';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { IonPage } from '@ionic/react'
+
 // import React from 'react'
 
 interface Props {
@@ -22,10 +24,11 @@ function AuthLayout(props: Props) {
         dashboard
     } = props
 
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     return (
-        <Box w={"full"} h={"100vh"} overflow={"hidden"} display={"flex"} bg={"brand.black"} alignItems={"center"} justifyContent={"center"} position={"relative"} >
+     <IonPage>
+           <Box w={"full"} h={"100vh"} overflow={"hidden"} display={"flex"} bg={"brand.black"} alignItems={"center"} justifyContent={"center"} position={"relative"} >
             {!dashboard && (
                 <Image width={"full"} height={"full"} zIndex={"10"} src={"/images/bg.png"} bg={"brand.black"} />
             )}
@@ -35,7 +38,7 @@ function AuthLayout(props: Props) {
                 </Box>
             )}
             {dashboard && (
-                <Box onClick={()=> navigate("/dashboard")} as="button" position={"fixed"} zIndex={"30"} top={"20%"} left={"60px"} > 
+                <Box onClick={()=> navigate.push("/dashboard")} as="button" position={"fixed"} zIndex={"30"} top={"20%"} left={"60px"} > 
                     <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 38.5C30.665 38.5 38.5 30.665 38.5 21C38.5 11.335 30.665 3.5 21 3.5C11.335 3.5 3.5 11.335 3.5 21C3.5 30.665 11.335 38.5 21 38.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M27.125 21H16.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -61,6 +64,7 @@ function AuthLayout(props: Props) {
                 )}
             </Flex>
         </Box>
+     </IonPage>
     )
 }
 

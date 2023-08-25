@@ -2,10 +2,10 @@ import React from 'react'
 import AuthLayout from '../../../components/authComponent/authLayout' 
 import ForgotPasswordStepControl from '../../../components/authComponent/forgotpasswordComponent'
 
-interface Props {}
+// interface Props {}
 
-function ForgotPassword(props: Props) {
-    const {} = props
+function ForgotPassword() {
+    // const {} = props
 
     const [tab, setTab] = React.useState(0)
 

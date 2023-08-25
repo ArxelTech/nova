@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Grid, GridItem, Flex, Box, Text } from '@chakra-ui/react'  
 
-interface Props {}
+// interface Props {}
 
-function MovieTile(props: Props) {
-    const {} = props
+function MovieTile() {
+    // const {} = props
 
     const list = [
         "text",

@@ -1,19 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FormLabel, Button, Box } from '@chakra-ui/react' 
 // import React from 'react' 
 import AuthLayout from '../../../components/authComponent/authLayout'
 import InputComponent from '../../../components/authComponent/inputComponent'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
-interface Props {}
+// interface Props {}
 
-function RegistrationPage(props: Props) {
-    const {} = props
+function RegistrationPage() {
+    // const {} = props
 
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     const handleSubmit =(e: any)=> {
         e.preventDefault()
-        navigate("/verify-email")
+        navigate.push("/verify-email")
     }
 
     return (

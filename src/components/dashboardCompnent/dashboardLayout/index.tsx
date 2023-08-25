@@ -2,6 +2,7 @@ import { Box, Flex, Grid, Text } from '@chakra-ui/react'
 import Navbar from './component/navbar'
 import Topbar from '../../topbar'
 import Sidebar from './component/sidebar';
+import { IonPage } from '@ionic/react'
 // import React from 'react'
 
 interface Props { 
@@ -14,7 +15,8 @@ function DashboardLayout(props: Props) {
     } = props
 
     return (
-        <Grid h="100vh" w={"full"}  overflowY={"hidden"} > 
+        <IonPage className='w-full h-screen bg-red-300'>
+            <Grid h="100vh" w={"full"}  overflowY={"hidden"} > 
             <Box width="full" position={"absolute"} zIndex={"30"} top={"0px"} >
                 <Navbar />   
             </Box>
@@ -37,6 +39,7 @@ function DashboardLayout(props: Props) {
                 </Box>
             </Flex>  
         </Grid> 
+        </IonPage>
     )
 }
 

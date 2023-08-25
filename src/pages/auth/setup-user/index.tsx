@@ -1,19 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import React from 'react'
 import AuthLayout from '../../../components/authComponent/authLayout'
 import { Box, Button, Flex, FormLabel } from '@chakra-ui/react'
 import InputComponent from '../../../components/authComponent/inputComponent'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
-interface Props {}
+// interface Props {}
 
-function SetupUser(props: Props) {
-    const {} = props
+function SetupUser() {
+    // const {} = props
 
-    const navigate = useNavigate() 
+    const navigate = useHistory() 
     
     const handleSubmit =(e: any)=> {
         e.preventDefault()
-        navigate("/")
+        navigate.push("/")
     }
 
     return (

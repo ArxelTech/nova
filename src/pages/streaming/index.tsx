@@ -3,10 +3,10 @@ import Topbar from '../../components/topbar'
 import { colorPallette } from '../../theme/theme' 
 import StreamingTab from '../../components/streamingComponent/streamingTab'
 
-interface Props {}
+// interface Props {}
 
-function Streaming(props: Props) {
-    const {} = props
+function Streaming() {
+    // const {} = props
 
     return (
         <Flex w="full" h="100vh" overflowY={"hidden"} bg={colorPallette.black} >

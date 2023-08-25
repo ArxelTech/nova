@@ -1,16 +1,17 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FormLabel, Button, Box, Flex, Image, Text } from '@chakra-ui/react' 
 // import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import AuthLayout from '../../components/authComponent/authLayout'
 import InputComponent from '../../components/authComponent/inputComponent'
 import React from 'react'
 
-interface Props {}
+// interface Props {}
 
-function JoinParty(props: Props) {
-    const {} = props
+function JoinParty() {
+    // const {} = props
 
-    const navigate = useNavigate()
+    const navigate = useHistory()
     const [tab, setTab] = React.useState(false)
     const [loading, setLoading] = React.useState(false)
 
@@ -23,7 +24,7 @@ function JoinParty(props: Props) {
         }, 2000); 
 
         const t2 = setTimeout(() => {  
-            navigate("/streaming")
+            navigate.push("/streaming")
             clearTimeout(t2);
         }, 4000);  
     }
