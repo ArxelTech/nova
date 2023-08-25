@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import { Box } from '@chakra-ui/react'
 import { Box, Button } from '@chakra-ui/react'
 import StepOne from './components/stepone'
 import StepThree from './components/stepthree'
 import StepTwo from './components/steptwo'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 // import React from 'react'
 
 interface Props {
@@ -17,7 +18,7 @@ function ForgotPasswordStepControl(props: Props) {
         setTab
     } = props
 
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     return (
         <Box width={"full"} mt="30px" >
@@ -31,7 +32,7 @@ function ForgotPasswordStepControl(props: Props) {
                 <StepThree next={setTab} />
             )}
             {tab === 3 && ( 
-                <Button onClick={()=> navigate("/")} bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Login To Account</Button>
+                <Button onClick={()=> navigate.push("/")} bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Login To Account</Button>
             )}
         </Box>
     )

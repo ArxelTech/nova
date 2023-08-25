@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 // import React from 'react' 
 
 interface Props {
@@ -11,7 +11,7 @@ function Topbar(props: Props) {
         user
     } = props
 
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     return (
         <Flex width="full" bg={"brand.black"} alignItems="center" justifyContent="space-between" borderBottom={"1px"} h={"130px"} px="32px" >
@@ -33,13 +33,13 @@ function Topbar(props: Props) {
             {!user && (
                 <Flex gap="8px" >
                     <Button color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor={"brand.base"} rounded="8px" _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}} bg={"brand.base"} >Invite A Friend</Button>
-                    <Button onClick={()=> navigate("/dashboard")} color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor="white" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} bg="transparent" >Leave Party</Button>
+                    <Button onClick={()=> navigate.push("/dashboard")} color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor="white" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} bg="transparent" >Leave Party</Button>
                 </Flex>
             )}
             {user && (
                 <Flex gap="8px" >
                     <Button color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor={"brand.base"} rounded="8px" _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}} bg={"brand.base"} >Start A Watch Party</Button>
-                    <Button onClick={()=> navigate("/join-party")} color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor="white" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} bg="transparent" >Join A Watch Party</Button>
+                    <Button onClick={()=> navigate.push("/join-party")} color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor="white" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} bg="transparent" >Join A Watch Party</Button>
                 </Flex>
             )}
         </Flex>

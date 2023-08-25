@@ -1,20 +1,20 @@
 import { Box, Button, Flex, PinInput, PinInputField, Link, Text } from '@chakra-ui/react'
 import React from 'react'
 import AuthLayout from '../../../components/authComponent/authLayout'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
-interface Props {}
+// interface Props {}
 
-function VerifyEmail(props: Props) {
-    const {} = props
+function VerifyEmail() {
+    // const {} = props
 
     const [pin, setPin] = React.useState("")
-    const navigate = useNavigate() 
+    const navigate = useHistory() 
     
     const handleComplete = (value: string) => { 
         setPin(value)  
         console.log(pin);
-        navigate("/setup-profile")
+        navigate.push("/setup-profile")
     }
 
 

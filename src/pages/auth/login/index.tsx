@@ -1,20 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import React from "react"
 // import { Link } from "react-router-dom"
 import AuthLayout from "../../../components/authComponent/authLayout"
 import { Box, Button, FormLabel, Link } from "@chakra-ui/react"
 import InputComponent from "../../../components/authComponent/inputComponent"
-import { useNavigate } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
-interface Props {}
 
-function LoginPage(props: Props) {
-    const {} = props
+function LoginPage() {
 
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     const handleSubmit =(e: any)=> {
         e.preventDefault()
-        navigate("/dashboard")
+        navigate.push("/dashboard")
     }
 
     return (
@@ -41,4 +40,4 @@ function LoginPage(props: Props) {
     )
 }
 
-export default LoginPage
+export default LoginPage;

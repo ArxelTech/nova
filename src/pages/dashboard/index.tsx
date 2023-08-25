@@ -3,10 +3,10 @@
 import DashboardLayout from '../../components/dashboardCompnent/dashboardLayout'
 import MovieTile from '../../components/dashboardCompnent/movieTiles'
 
-interface Props {}
+// interface Props {}
 
-function Dashboard(props: Props) {
-    const {} = props
+function Dashboard() {
+    // const {} = props
 
     return (
         <DashboardLayout>
