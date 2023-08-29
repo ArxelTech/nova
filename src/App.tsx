@@ -10,6 +10,7 @@ import VerifyEmail from './pages/auth/verifyemail';
 import SetupUser from './pages/auth/setup-user';
 import Dashboard from './pages/dashboard';
 import JoinParty from './pages/joinparty';
+import Platform from './pages/platform';
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
               <Route  path="/forgot-password" component={ForgotPassword}  />
 
               <Route  path='/dashboard' component={Dashboard }  />
+              <Route  path='/platform' component={Platform }  />
               <Route  path='/join-party' component={JoinParty}  />
               <Route  path='/streaming' component={Streaming}  />
           </IonRouterOutlet>

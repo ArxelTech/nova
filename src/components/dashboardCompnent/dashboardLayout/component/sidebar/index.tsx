@@ -12,7 +12,7 @@ function Sidebar(props: Props) {
 
     return (
         <Box w="full" height={"full"} display={"flex"} flexDirection={"column"}>
-            <Box w="full" bg={"brand.black"} mt={"28px"}  p="28px"  zIndex={"30"} position={"sticky"} top={"0px"}>
+            <Box w="full" bg={"brand.black"} mt={"28px"}  p="28px"  >
                 <Box p={"16px"} rounded={"8px"} bg={"brand.btnbg"} w={"full"} >
                     <Text fontFamily={"700"} color={"brand.gray200"} >Become A Premium User</Text>
                     <Text fontFamily={"400"} color={"brand.gray200"}>Text your friends on your phone while watching the movie by using companion mode</Text>
@@ -24,7 +24,7 @@ function Sidebar(props: Props) {
                         </svg>
                     </Button>
                 </Box>
-                <Box w={"full"} mt={"24px"} pt={"24px"} borderTop={"1px"} > 
+                <Box zIndex={"30"} position={"sticky"} top={"0px"} w={"full"} mt={"24px"} pt={"24px"} borderTop={"1px"} > 
                     <Flex justifyContent={"space-between"} >
                         <Text color={"brand.gray300"} fontFamily={"700"} fontSize={"18px"} >Friends (6)</Text>
                         <Button color="white" px="14px" height="42px" fontSize="14px" fontFamily={"600"} border="1px" borderColor="white" rounded="8px" _hover={{ backgroundColor: "transparent"}} _focus={{ backgroundColor: "transparent"}} bg="transparent" >Add Friends</Button>
