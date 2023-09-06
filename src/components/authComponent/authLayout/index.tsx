@@ -36,6 +36,9 @@ function AuthLayout(props: Props) {
                 <Box w={"full"} position={"fixed"} top={"0px"} zIndex={"30"} > 
                     <Navbar />
                 </Box>
+            )} 
+            {!dashboard && (
+                <Image width={"90px"} mx="auto" display={["block", "block", "none"]} position={["absolute", "absolute", "relative"]} top={"30px"} src={"/images/logo.svg"} />
             )}
             {dashboard && (
                 <Box onClick={()=> navigate.push("/dashboard")} as="button" position={"fixed"} zIndex={"30"} top={"20%"} left={"60px"} > 
@@ -46,13 +49,13 @@ function AuthLayout(props: Props) {
                     </svg>
                 </Box>
             )}
-            <Flex flexDirection={"column"}  alignItems={dashboard ? "":"center"} mt={dashboard ? "30px": ""} position={"fixed"} maxHeight={["100vh", "100vh", "90vh"]} overflowY={"auto"} overflowX={"hidden"} shadow={["none","none","2xl"]} width={[ "full", "full","600px"]} zIndex={"30"} rounded={"16px"} border={["0px", "0px","1px"]} paddingTop={"35px"} paddingX={[ "16px","40px"]} paddingBottom={"100px"} bg={"brand.black"} >
+            <Flex flexDirection={"column"}  alignItems={dashboard ? "":["start","center"]} mt={dashboard ? "30px": ""} position={"fixed"} maxHeight={["100vh", "100vh", "90vh"]} overflowY={"auto"} overflowX={"hidden"} shadow={["none","none","2xl"]} width={[ "full", "full","600px"]} zIndex={"30"} rounded={"16px"} border={["0px", "0px","1px"]} paddingTop={"35px"} paddingX={[ "16px","40px"]} paddingBottom={"100px"} bg={"brand.black"} >
                 {!dashboard && (
-                    <Image width={"90px"} src={"/images/logo.svg"} />
+                    <Image width={"90px"} mx="auto" display={["none", "none", "block"]} position={["absolute", "absolute", "relative"]} top={"0px"} src={"/images/logo.svg"} />
                 )}
-                <Text mt={"20px"} fontFamily={"700"} color={"brand.gray300"} fontSize={["24px","32px"]} >{title}</Text>
+                <Text mt={"20px"} fontFamily={"700"} color={"brand.gray300"} fontSize={["28px","32px"]} >{title}</Text>
                 <Flex alignItems={"center"} gap={"4px"} >
-                    <Text fontFamily={"400"} color={"brand.gray200"} textAlign={["center", "center", "left"]} >{body}</Text>
+                    <Text fontFamily={"400"} color={"brand.gray200"} textAlign={["left"]} >{body}</Text>
                     <Link color={"brand.base"} href={link} fontFamily={"500"} >{linklabel}</Link>
                 </Flex>
                 {children}
