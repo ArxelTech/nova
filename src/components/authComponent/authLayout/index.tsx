@@ -30,7 +30,7 @@ function AuthLayout(props: Props) {
      <IonPage>
            <Box w={"full"} h={"100vh"} overflow={"hidden"} display={"flex"} bg={"brand.black"} alignItems={"center"} justifyContent={"center"} position={"relative"} >
             {!dashboard && (
-                <Image width={"full"} height={"full"} zIndex={"10"} src={"/images/bg.png"} bg={"brand.black"} />
+                <Image width={"full"} height={"full"} zIndex={"10"} src={"/images/bg.png"} display={["none","none","none","block"]} bg={"brand.black"} />
             )}
             {dashboard && (
                 <Box w={"full"} position={"fixed"} top={"0px"} zIndex={"30"} > 
@@ -46,21 +46,21 @@ function AuthLayout(props: Props) {
                     </svg>
                 </Box>
             )}
-            <Flex flexDirection={"column"}  alignItems={dashboard ? "":"center"} mt={dashboard ? "30px": ""} position={"fixed"} maxHeight={"80vh"} overflowY={"auto"} shadow={"2xl"} width={"600px"} zIndex={"30"} rounded={"16px"} border={"1px"} paddingTop={"35px"} paddingX={"40px"} paddingBottom={"100px"} bg={"brand.black"} >
+            <Flex flexDirection={"column"}  alignItems={dashboard ? "":"center"} mt={dashboard ? "30px": ""} position={"fixed"} maxHeight={["100vh", "100vh", "90vh"]} overflowY={"auto"} overflowX={"hidden"} shadow={["none","none","2xl"]} width={[ "full", "full","600px"]} zIndex={"30"} rounded={"16px"} border={["0px", "0px","1px"]} paddingTop={"35px"} paddingX={[ "16px","40px"]} paddingBottom={"100px"} bg={"brand.black"} >
                 {!dashboard && (
                     <Image width={"90px"} src={"/images/logo.svg"} />
                 )}
-                <Text mt={"20px"} fontFamily={"700"} color={"brand.gray300"} fontSize={"32px"} >{title}</Text>
+                <Text mt={"20px"} fontFamily={"700"} color={"brand.gray300"} fontSize={["24px","32px"]} >{title}</Text>
                 <Flex alignItems={"center"} gap={"4px"} >
-                    <Text fontFamily={"400"} color={"brand.gray200"} >{body}</Text>
+                    <Text fontFamily={"400"} color={"brand.gray200"} textAlign={["center", "center", "left"]} >{body}</Text>
                     <Link color={"brand.base"} href={link} fontFamily={"500"} >{linklabel}</Link>
                 </Flex>
                 {children}
                 {title !== "Joining Watch Party" && ( 
-                    <Image src={"/images/TV.png"} width={"125px"} position={linklabel === "Login" ? "fixed" : "absolute"} zIndex={"30"} bottom={"0px"} right={"0px"}  />
+                    <Image src={"/images/TV.png"} width={"125px"} display={["none", "none", "block"]} position={linklabel === "Login" ? "fixed" : "absolute"} zIndex={"30"} bottom={"0px"} right={"0px"}  />
                 )}
                 {title === "Joining Watch Party" && ( 
-                    <Image src={"/images/TV.png"} width={"125px"} position={linklabel === "Login" ? "fixed" : "absolute"} zIndex={"30"} bottom={"0px"} left={"0px"}  />
+                    <Image src={"/images/TV.png"} width={"125px"} display={["none", "none", "block"]} position={linklabel === "Login" ? "fixed" : "absolute"} zIndex={"30"} bottom={"0px"} left={"0px"}  />
                 )}
             </Flex>
         </Box>

@@ -23,17 +23,17 @@ function VerifyEmail() {
             <Box width={"full"} mt="30px" > 
                 <Box display={"flex"} flexDirection={"column"} gap={"20px"} >
                     <Flex alignItems={"center"} width={"full"} >   
-                        <PinInput  onComplete={handleComplete} focusBorderColor="brand.inactive"  otp placeholder="0" >
-                            <PinInputField mx="6px" fontSize={"48px"} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={"64px"} height={"64px"} />
-                            <PinInputField mx="6px" fontSize={"48px"} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={"64px"} height={"64px"} />
-                            <PinInputField mx="6px" fontSize={"48px"} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={"64px"} height={"64px"}/>
-                            <Text fontSize={"60px"} mx="6px" color={"brand.inactive"} >-</Text>
-                            <PinInputField mx="6px" fontSize={"48px"} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={"64px"} height={"64px"} />
-                            <PinInputField mx="6px" fontSize={"48px"} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={"64px"} height={"64px"} />
-                            <PinInputField mx="6px" fontSize={"48px"} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={"64px"} height={"64px"}/>
-                        </PinInput>
+                    <PinInput  onComplete={handleComplete} focusBorderColor="brand.inactive"  otp placeholder="0" >
+                        <PinInputField mx={["auto", "auto", "6px"]} fontSize={["28px" ,"28px" ,"48px"]} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={["50px" ,"50px" ,"64px"]} height={["50px" ,"50px" ,"64px"]} />
+                        <PinInputField mx={["auto", "auto", "6px"]} fontSize={["28px" ,"28px" ,"48px"]} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={["50px" ,"50px" ,"64px"]} height={["50px" ,"50px" ,"64px"]} />
+                        <PinInputField mx={["auto", "auto", "6px"]} fontSize={["28px" ,"28px" ,"48px"]} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={["50px" ,"50px" ,"64px"]} height={["50px" ,"50px" ,"64px"]} />
+                        <Text fontSize={"60px"} display={["none", "none", "block"]} mx="6px" color={"brand.inactive"} >-</Text>
+                        <PinInputField mx={["auto", "auto", "6px"]} fontSize={["28px" ,"28px" ,"48px"]} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={["50px" ,"50px" ,"64px"]} height={["50px" ,"50px" ,"64px"]} />
+                        <PinInputField mx={["auto", "auto", "6px"]} fontSize={["28px" ,"28px" ,"48px"]} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={["50px" ,"50px" ,"64px"]} height={["50px" ,"50px" ,"64px"]} />
+                        <PinInputField mx={["auto", "auto", "6px"]} fontSize={["28px" ,"28px" ,"48px"]} fontFamily={"700"} color={"white"} borderColor={"brand.inactive"} _focus={{borderColor:"brand.inactive"}}  width={["50px" ,"50px" ,"64px"]} height={["50px" ,"50px" ,"64px"]} />
+                    </PinInput>
                     </Flex> 
-                    <Box width={"full"} display={"flex"} mt={"6px"} gap={"21px"} alignItems={"center"} >
+                    <Box width={"full"} display={"flex"} mt={["20px","6px"]} gap={"21px"} alignItems={"center"} >
                         <Button type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Verify Code</Button>
                         <Link href="" color={"brand.base"} fontFamily={"500"} >Resend Code</Link>
                     </Box>
