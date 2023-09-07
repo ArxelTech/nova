@@ -29,7 +29,7 @@ function WatchPartyOption(props: Props) {
             <Text fontWeight={700} color={"brand.gray200"} >Watch Party Options</Text>
             <Flex mt="24px" justifyContent="space-between" w="full" >
                 <Box display="flex" alignItems="center" flexDirection="column" > 
-                    <Box onClick={()=> clickHandler(0)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 0 ? "brand.primaryColor" : "transparent"} border="1px" borderColor={tab === 0 ? "brand.primaryColor" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
+                    <Box onClick={()=> clickHandler(0)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 0 ? "brand.base" : "transparent"} border="1px" borderColor={tab === 0 ? "brand.base" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.09 13.51L15.92 17.49M15.91 6.51L9.09 10.49M21.5 5C21.5 6.65685 20.1569 8 18.5 8C16.8431 8 15.5 6.65685 15.5 5C15.5 3.34315 16.8431 2 18.5 2C20.1569 2 21.5 3.34315 21.5 5ZM9.5 12C9.5 13.6569 8.15685 15 6.5 15C4.84315 15 3.5 13.6569 3.5 12C3.5 10.3431 4.84315 9 6.5 9C8.15685 9 9.5 10.3431 9.5 12ZM21.5 19C21.5 20.6569 20.1569 22 18.5 22C16.8431 22 15.5 20.6569 15.5 19C15.5 17.3431 16.8431 16 18.5 16C20.1569 16 21.5 17.3431 21.5 19Z" stroke={tab === 0 ? "white": "#667085"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -37,7 +37,7 @@ function WatchPartyOption(props: Props) {
                     <Text mt="8px" fontSize="14px" fontFamily="400" color={tab === 0 ? "brand.gray200": "brand.inactive"} >Share</Text>
                 </Box>
                 <Box display="flex" alignItems="center" flexDirection="column" > 
-                    <Box onClick={()=> clickHandler(1)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 1 ? "brand.primaryColor" : "transparent"} border="1px" borderColor={tab === 1 ? "brand.primaryColor" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
+                    <Box onClick={()=> clickHandler(1)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 1 ? "brand.base" : "transparent"} border="1px" borderColor={tab === 1 ? "brand.base" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M22.5 12C22.5 6.48 18.02 2 12.5 2C6.98 2 2.5 6.48 2.5 12C2.5 17.52 6.98 22 12.5 22" stroke={tab === 1 ? "white": "#667085"} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M8.49961 3H9.49961C7.54961 8.84 7.54961 15.16 9.49961 21H8.49961" stroke={tab === 1 ? "white": "#667085"} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -51,7 +51,7 @@ function WatchPartyOption(props: Props) {
                     <Text mt="8px" fontSize="14px" fontFamily="400" color={tab === 1 ? "brand.gray200": "brand.inactive"} >Map</Text>
                 </Box>
                 <Box display="flex" alignItems="center" flexDirection="column" > 
-                    <Box onClick={()=> clickHandler(2)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 2 ? "brand.primaryColor" : "transparent"} border="1px" borderColor={tab === 2 ? "brand.primaryColor" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
+                    <Box onClick={()=> clickHandler(2)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 2 ? "brand.base" : "transparent"} border="1px" borderColor={tab === 2 ? "brand.base" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_6_48349)">
                                 <path d="M1.5 1.00009L23.5 23.0001M15.5 9.34009V4.00009C15.5007 3.25612 15.225 2.53841 14.7264 1.98629C14.2277 1.43417 13.5417 1.08703 12.8015 1.01227C12.0613 0.937497 11.3197 1.14043 10.7207 1.58168C10.1217 2.02293 9.70805 2.671 9.56 3.40009M17.5 16.9501C16.5238 17.9465 15.2721 18.6285 13.9056 18.9087C12.5391 19.1888 11.12 19.0543 9.8305 18.5224C8.54096 17.9904 7.43976 17.0854 6.66817 15.9232C5.89658 14.7611 5.48979 13.395 5.5 12.0001V10.0001M19.5 10.0001V12.0001C19.4996 12.4125 19.4628 12.8241 19.39 13.2301M12.5 19.0001V23.0001M8.5 23.0001H16.5M9.5 9.00009V12.0001C9.50052 12.5931 9.67675 13.1726 10.0064 13.6654C10.3361 14.1583 10.8045 14.5424 11.3523 14.7692C11.9002 14.9961 12.5029 15.0555 13.0845 14.94C13.6661 14.8244 14.2005 14.5391 14.62 14.1201L9.5 9.00009Z" stroke={tab === 2 ? "white": "#667085"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -66,7 +66,7 @@ function WatchPartyOption(props: Props) {
                     <Text mt="8px" fontSize="14px" fontFamily="400" color={tab === 2 ? "brand.gray200": "brand.inactive"} >Talk</Text>
                 </Box>
                 <Box display="flex" alignItems="center" flexDirection="column" > 
-                    <Box onClick={()=> clickHandler(3)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 3 ? "brand.primaryColor" : "transparent"} border="1px" borderColor={tab === 3 ? "brand.primaryColor" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
+                    <Box onClick={()=> clickHandler(3)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 3 ? "brand.base" : "transparent"} border="1px" borderColor={tab === 3 ? "brand.base" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M22.5 11.0801V12.0001C22.4988 14.1565 21.8005 16.2548 20.5093 17.9819C19.2182 19.7091 17.4033 20.9726 15.3354 21.584C13.2674 22.1954 11.0573 22.122 9.03447 21.3747C7.01168 20.6274 5.28465 19.2462 4.11096 17.4372C2.93727 15.6281 2.37979 13.4882 2.52168 11.3364C2.66356 9.18467 3.49721 7.13643 4.89828 5.49718C6.29935 3.85793 8.19279 2.71549 10.2962 2.24025C12.3996 1.76502 14.6003 1.98245 16.57 2.86011M22.5 4.00011L12.5 14.0101L9.50001 11.0101" stroke={tab === 3 ? "white" : "#667085"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -74,7 +74,7 @@ function WatchPartyOption(props: Props) {
                     <Text mt="8px" fontSize="14px" fontFamily="400" color={tab === 3 ? "brand.gray200": "brand.inactive"} >Request</Text>
                 </Box>
                 <Box display="flex" alignItems="center" flexDirection="column" > 
-                    <Box onClick={()=> clickHandler(4)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 4 ? "brand.primaryColor" : "transparent"} border="1px" borderColor={tab === 4 ? "brand.primaryColor" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
+                    <Box onClick={()=> clickHandler(4)} pr="2px" cursor="pointer" w="55px" h="55px" bg={tab === 4 ? "brand.base" : "transparent"} border="1px" borderColor={tab === 4 ? "brand.base" : "#667085"} rounded="full" display="flex" alignItems="center" justifyContent="center" >
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_6_48359)">
                                 <path d="M12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z" stroke={tab === 4 ? "white" : "#667085"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

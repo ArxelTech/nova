@@ -17,13 +17,13 @@ function DashboardLayout(props: Props) {
     return (
         <IonPage className='w-full h-screen bg-red-300'>
             <Grid h="100vh" w={"full"}  overflowY={"hidden"} > 
-            <Box width="full" position={"absolute"} zIndex={"30"} top={"0px"} >
-                <Navbar />   
-            </Box> 
-            <Flex w="full" h="full" pt={"100px"} overflowY={"hidden"} bg={"brand.black"} >
-                {children}
-            </Flex>
-        </Grid> 
+                <Box width="full" position={"absolute"} zIndex={"30"} top={"0px"} >
+                    <Navbar />   
+                </Box> 
+                <Flex w="full" h="full" pt={"100px"} overflowY={"hidden"} bg={"brand.black"} >
+                    {children}
+                </Flex>
+            </Grid> 
         </IonPage>
     )
 }

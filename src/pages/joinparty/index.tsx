@@ -24,7 +24,7 @@ function JoinParty() {
         }, 2000); 
 
         const t2 = setTimeout(() => {  
-            navigate.push("/streaming")
+            navigate.push("/streaming") 
             clearTimeout(t2);
         }, 4000);  
     }
