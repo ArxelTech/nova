@@ -60,7 +60,7 @@ export default function InputComponent({left, leftIcon, right, rightIcon, type, 
             {touch && error && (
                 <Text as={motion.p}
                     initial={{ y: -100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }} color="#E84545" fontWeight="600" fontFamily="header" fontSize="xs" mt="-8px" textAlign="left" >{error}</Text>
+                    animate={{ y: 0, opacity: 1 }} color="#E84545" fontWeight="600" fontFamily="header" fontSize="xs" mt="3px" textAlign="left" >{error}</Text>
             )}
         </>
     )

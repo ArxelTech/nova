@@ -42,7 +42,7 @@ function App() {
               <Route  path="/" component={LoginPage} />
               {/* Registration Process */}
               <Route  path="/register" component={RegistrationPage}  />
-              <Route  path="/verify-email" component={VerifyEmail}  />
+              <Route  path="/verify-email/:id" component={VerifyEmail}  />
               <Route  path="/setup-profile" component={SetupUser}  />
               
               {/* Forgot Password */}

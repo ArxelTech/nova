@@ -1,25 +1,24 @@
-import { Button, Box, Link, PinInput, PinInputField, Text, Flex } from "@chakra-ui/react" 
-import React from "react"  
+import { Box, Link, PinInput, PinInputField, Text, Flex } from "@chakra-ui/react" 
+// import React from "react"  
 
 interface Props {
-    next: any
+    next: Function,  
+    setOtp: Function
 }
 
 function StepTwo(props: Props) {
     const {
-        next
-    } = props
-
-    const [pin, setPin] = React.useState("")
+        next, 
+        setOtp
+    } = props 
 
     const handleSubmit =(e: any)=> {
         e.preventDefault()
     }
 
     const handleComplete = (value: string) => { 
-        setPin(value) 
-        next(2)
-        console.log(pin);
+        setOtp(value) 
+        next(2) 
     }
 
     return ( 
@@ -37,7 +36,7 @@ function StepTwo(props: Props) {
                     </PinInput>
                 </Flex> 
                 <Box width={"full"} display={"flex"} mt={"6px"} gap={"21px"} alignItems={"center"} >
-                    <Button bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Verify Code</Button>
+                    {/* <Button bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Verify Code</Button> */}
                     <Link href="" color={"brand.base"} fontFamily={"500"} >Resend Code</Link>
                 </Box>
             </Box>

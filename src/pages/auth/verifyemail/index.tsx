@@ -1,7 +1,10 @@
 import { Box, Button, Flex, PinInput, PinInputField, Link, Text } from '@chakra-ui/react'
 import React from 'react'
 import AuthLayout from '../../../components/authComponent/authLayout'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
+import useAuth from '../../../hooks/useAuth'
+import { useParams } from 'react-router'
+import SubmitBtn from '../../../components/submitbtn'
 
 // interface Props {}
 
@@ -9,12 +12,19 @@ function VerifyEmail() {
     // const {} = props
 
     const [pin, setPin] = React.useState("")
-    const navigate = useHistory() 
+    // const navigate = useHistory()  
+
+    const { id }: any = useParams();      
+
+    const { emailVerify, isLoading } = useAuth()
     
     const handleComplete = (value: string) => { 
         setPin(value)  
         console.log(pin);
-        navigate.push("/setup-profile")
+        emailVerify({
+            "userdataId": id,
+            "code": value
+          })
     }
 
 
@@ -34,7 +44,8 @@ function VerifyEmail() {
                     </PinInput>
                     </Flex> 
                     <Box width={"full"} display={"flex"} mt={["20px","6px"]} gap={"21px"} alignItems={"center"} >
-                        <Button type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Verify Code</Button>
+                        <SubmitBtn name="Verify Code" loading={isLoading} />
+                        {/* <Button type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >Verify Code</Button> */}
                         <Link href="" color={"brand.base"} fontFamily={"500"} >Resend Code</Link>
                     </Box>
                 </Box>
