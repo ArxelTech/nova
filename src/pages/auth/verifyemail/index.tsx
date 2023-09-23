@@ -1,4 +1,4 @@
-import { Box, Button, Flex, PinInput, PinInputField, Link, Text } from '@chakra-ui/react'
+import { Box, Flex, PinInput, PinInputField, Link, Text } from '@chakra-ui/react'
 import React from 'react'
 import AuthLayout from '../../../components/authComponent/authLayout'
 // import { useHistory } from 'react-router-dom'
