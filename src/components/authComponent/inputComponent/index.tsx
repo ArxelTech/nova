@@ -47,7 +47,7 @@ export default function InputComponent({left, leftIcon, right, rightIcon, type, 
                         children={
                             <Box display="flex" height={h ? h : "40px"} justifyContent="center" alignItems="center" marginTop="10px" paddingRight="30px" marginLeft="12px" >
                                 {!rightIcon ? 
-                                    <Text as="button" onClick={()=> ViewPassword()} fontFamily={"700"} fontSize={"sm"} color={"brand.base"} >
+                                    <Text cursor={"pointer"} onClick={()=> ViewPassword()} fontFamily={"700"} fontSize={"sm"} color={"brand.base"} >
                                         {intialType === "password" ? "Show": "Hide"} 
                                     </Text>
                                     : rightIcon
