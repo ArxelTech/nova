@@ -63,7 +63,7 @@ const useAuth = () => {
     try {
       const response = await authService.register(data)
       console.log(response);
-      localStorage.setItem("userId", response?.data?.id)
+      localStorage.setItem("email", data?.email)
       toast({
         title: "Account created.",
         description: response?.message,
