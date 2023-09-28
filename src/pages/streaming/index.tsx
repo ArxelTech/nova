@@ -1,5 +1,5 @@
 import { Box, Flex, Grid, Text } from '@chakra-ui/react' 
-import Topbar from '../../components/topbar'
+import Topbar from '../../components/sharedcomponent/topbar'
 import { colorPallette } from '../../theme/theme' 
 import StreamingTab from '../../components/streamingComponent/streamingTab'
 

@@ -18,6 +18,7 @@ const useAuth = () => {
     try {
       const response = await authService.login(data) 
       Cookies.set("access_token", response?.data?.tokens?.accessToken)
+      localStorage.setItem("userId", response?.data?.id)
       setUser(response?.user)
       toast({
         title: "Authentication",
@@ -26,8 +27,8 @@ const useAuth = () => {
         duration: 3000,
         isClosable: true,
       })
-      // navigate.push("/buyer-home")
-      // response.user?.user_type === "seller" ? navigate.push("/dashboard") : navigate.push("/buyer-home")
+      navigate.push("/dashboard") 
+      navigate.go(0)
     } catch (error: any) {
       setError(error.message)
       toast({
@@ -63,7 +64,9 @@ const useAuth = () => {
     try {
       const response = await authService.register(data)
       console.log(response);
+      Cookies.set("access_token", response?.data?.tokens?.accessToken)
       localStorage.setItem("email", data?.email)
+      localStorage.setItem("userId", response?.data?.id)
       toast({
         title: "Account created.",
         description: response?.message,
@@ -74,6 +77,34 @@ const useAuth = () => {
       navigate.push("/verify-email/"+response?.data?.id)
     } catch (error: any) {
       console.log("registeration error", error)
+      setError(error.message)
+      toast({
+        title: "Account Creation error",
+        description: error?.response?.data?.message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const adduserDetails = async (data: any, index: any) => {
+    setIsLoading(true)
+    setError(null)
+    try {
+      const response = await authService.userDetail(data, index)
+      console.log(response); 
+      toast({
+        title: "Account Updated.",
+        description: response?.message,
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      })
+      navigate.push("/dashboard")
+    } catch (error: any) { 
       setError(error.message)
       toast({
         title: "Account Creation error",
@@ -100,7 +131,7 @@ const useAuth = () => {
         duration: 3000,
         isClosable: true,
       })
-        navigate.push("/setup-profile")
+      navigate.push("/setup-profile/"+data?.userId)
     } catch (error: any) {
       console.log("verfication error", error)
       setError(error.message)
@@ -176,7 +207,7 @@ const useAuth = () => {
     }
   } 
 
-  return { user, isLoading, error, login, logout, register, emailVerify, sendPasswordResetOtp, resetPassword }
+  return { user, isLoading, error, login, logout, register, emailVerify, sendPasswordResetOtp, resetPassword, adduserDetails }
 }
 
 export default useAuth

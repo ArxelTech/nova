@@ -26,12 +26,19 @@ const passwordReset = async (data: any) => {
   return response.data
 } 
 
+
+const userDetail = async (data: any, index: any) => {
+  const response = await axiosInstance.put("/user/"+index, data)
+  return response.data
+} 
+
 const authService = {
   login,
   register,
   emailVerify,
   sendPasswordResetOtp,
-  passwordReset 
+  passwordReset,
+  userDetail
 }
 
 export default authService

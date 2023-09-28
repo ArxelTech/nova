@@ -38,12 +38,12 @@ function App() {
   return (
     <IonApp>
       <IonReactRouter>
-          <IonRouterOutlet>
+          <IonRouterOutlet> 
               <Route  path="/" component={LoginPage} />
               {/* Registration Process */}
               <Route  path="/register" component={RegistrationPage}  />
               <Route  path="/verify-email/:id" component={VerifyEmail}  />
-              <Route  path="/setup-profile" component={SetupUser}  />
+              <Route  path="/setup-profile/:id" component={SetupUser}  />
               
               {/* Forgot Password */}
               <Route  path="/forgot-password" component={ForgotPassword}  />

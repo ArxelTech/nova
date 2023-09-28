@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react'
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom' 
 // import React from 'react' 
 
 interface Props {
@@ -11,7 +11,7 @@ function Topbar(props: Props) {
         user
     } = props
 
-    const navigate = useHistory()
+    const navigate = useHistory() 
 
     return (
         <Flex width="full" bg={"brand.black"} alignItems="center" justifyContent="space-between" borderBottom={"1px"} h={"130px"} px="32px" >
