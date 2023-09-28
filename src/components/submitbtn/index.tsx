@@ -15,7 +15,7 @@ function SubmitBtn(props: Props) {
     } = props
 
     return (
-        <Button {...rest} type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >
+        <Button disabled={loading} {...rest} type="submit" bg={"brand.base"} color={"white"}  _hover={{ backgroundColor: "brand.base"}} _focus={{ backgroundColor: "brand.base"}}   >
             {loading ? "Loading": name}
         </Button>
     )
