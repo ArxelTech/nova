@@ -50,10 +50,10 @@ function AddedTab(props: Props) {
     ]
 
     return (
-        <Box  w={"full"} overflowY={"auto"} position={"relative"} display={"flex"} sx={{ flex: '1 0 auto' }} gap={"28px"} flexDirection={"column"}>
+        <Box  w={"full"} overflowY={"auto"} position={"relative"} display={"flex"} sx={{ flex: '1 0 auto' }} gap={"10px"} flexDirection={"column"}>
             {friend?.map((item: any) => {
                 return( 
-                    <Flex key={item?.name} alignItems={"center"} py={"14px"} px={"10px"} borderBottom={"1px"} justifyContent={"space-between"} >
+                    <Flex key={item?.name} alignItems={"center"} py={"10px"} px={"10px"} borderBottom={"1px"} justifyContent={"space-between"} >
                         <Flex alignItems={"center"} gap={"8px"} > 
                             <Box w={"40px"} h={"40px"} rounded={"full"} bg={"brand.base"} >
 

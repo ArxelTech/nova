@@ -28,7 +28,7 @@ setupIonicReact();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode> 
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}> 
       <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>

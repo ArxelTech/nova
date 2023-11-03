@@ -1,7 +1,7 @@
 // import React from 'react'
 import DashboardLayout from '../dashboardLayout'
 import { Box, Text } from '@chakra-ui/react' 
-import Topbar from '../../topbar'
+import Topbar from '../../sharedcomponent/topbar'
 import Sidebar from '../dashboardLayout/component/sidebar'
 
 interface Props { 

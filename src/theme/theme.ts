@@ -8,7 +8,7 @@ export const colorPallette = {
     black: '#0A1018',
     secondarybg: "#10161D",
     btnbg: "#181E25",
-    base: "#5A20D4",
+    base: "#5A20D5",
     tabcolor: "#6D6D6D0F",
     chat: "#253240",
     online: "#27ECA5" ,

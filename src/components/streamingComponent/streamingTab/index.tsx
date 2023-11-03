@@ -14,11 +14,11 @@ function DashboardTab(props: Props) {
     const [watchTab, setwatchTab] = React.useState(false)
 
     return (
-        <Box w="full" height={"100vh"} display={"flex"} flexDirection={"column"} >
-            <Box w="full" bg={"brand.black"} pt={"28px"} zIndex={"30"} position={"sticky"} top={"0px"} > 
+        <Box w="full" height={[ "60vh", "60vh", "100vh"]} display={"flex"} flexDirection={"column"} >
+            <Box w="full" bg={"brand.black"} pt={["5px", "5px", "28px"]} zIndex={"30"} position={"sticky"} top={"0px"} > 
                 <WatchPartyOption show={watchTab} max={setwatchTab} />
                 {!watchTab && (
-                     <Box mt="20px"  w="100%" bg="brand.tabcolor" rounded={"10px"} px={"7px"} py={"6px"} >
+                     <Box mt="20px" display={["none", "none", "block"]} w="100%" bg="brand.tabcolor" rounded={"10px"} px={"7px"} py={"6px"} >
                         <Flex gap={"6px"} >
                             <Button onClick={()=> setTab(false)} _hover={{ backgroundColor: "brand.btnbg"}} _focus={{ backgroundColor: "brand.btnbg"}} h="50px" w="full" bg={!tab ? "brand.btnbg" : ""} color={"brand.gray200"} rounded={"10px"} >
                                 Chat

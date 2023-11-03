@@ -12,7 +12,7 @@ function Sidebar(props: Props) {
 
     return (
         <Box w="full" height={"full"} display={"flex"} flexDirection={"column"}>
-            <Box w="full" bg={"brand.black"} mt={"28px"}  p="28px"  >
+            <Box w="full" bg={"brand.black"} mt={"10px"}  px="28px"  >
                 <Box p={"16px"} rounded={"8px"} bg={"brand.btnbg"} w={"full"} >
                     <Text fontFamily={"700"} color={"brand.gray200"} >Become A Premium User</Text>
                     <Text fontFamily={"400"} color={"brand.gray200"}>Text your friends on your phone while watching the movie by using companion mode</Text>
@@ -44,7 +44,7 @@ function Sidebar(props: Props) {
                     </Box>
                 </Box>
             </Box>
-            <Box w={"full"} h={"full"}  p="28px" overflowY={"auto"} > 
+            <Box w={"full"} h={"full"} px="28px" overflowY={"auto"} > 
                 <FriendTab tab={tab} />
             </Box>
         </Box>

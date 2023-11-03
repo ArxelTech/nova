@@ -47,7 +47,7 @@ export default function InputComponent({left, leftIcon, right, rightIcon, type, 
                         children={
                             <Box display="flex" height={h ? h : "40px"} justifyContent="center" alignItems="center" marginTop="10px" paddingRight="30px" marginLeft="12px" >
                                 {!rightIcon ? 
-                                    <Text as="button" onClick={()=> ViewPassword()} fontFamily={"700"} fontSize={"sm"} color={"brand.base"} >
+                                    <Text cursor={"pointer"} onClick={()=> ViewPassword()} fontFamily={"700"} fontSize={"sm"} color={"brand.base"} >
                                         {intialType === "password" ? "Show": "Hide"} 
                                     </Text>
                                     : rightIcon
@@ -60,7 +60,7 @@ export default function InputComponent({left, leftIcon, right, rightIcon, type, 
             {touch && error && (
                 <Text as={motion.p}
                     initial={{ y: -100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }} color="#E84545" fontWeight="600" fontFamily="header" fontSize="xs" mt="-8px" textAlign="left" >{error}</Text>
+                    animate={{ y: 0, opacity: 1 }} color="#E84545" fontWeight="600" fontFamily="header" fontSize="xs" mt="3px" textAlign="left" >{error}</Text>
             )}
         </>
     )

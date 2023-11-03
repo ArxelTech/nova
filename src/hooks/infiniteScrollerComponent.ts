@@ -1,0 +1,95 @@
+import React from 'react'
+import { useQuery } from 'react-query' 
+// import httpService from '../utils/httpService';
+import { AxiosError } from 'axios'; 
+import lodash from 'lodash'; 
+import axiosInstance from '../services/axiosInstance';
+
+interface Props {
+    url: string,
+    filter?: string,
+    limit: number,
+    newdata?: any,
+    array?: any,
+}
+
+function InfiniteScrollerComponent(props: Props) {
+    const {
+        url,
+        filter,
+        limit,
+        array, 
+    } = props
+
+    const [size, setSize] = React.useState(limit)
+    const [hasNextPage, setHasNextPage] = React.useState(false);
+    const [results, setResults] = React.useState([] as any) 
+    const intObserver = React.useRef<IntersectionObserver>();
+
+    const { data, isLoading, refetch, isRefetching } = useQuery([url], () => axiosInstance.get(`${url}`, {
+        params: {
+          size: size
+        }
+      }), {
+        onError: (error: AxiosError<any, any>) => {
+          // toast.error(error.response?.data);
+          console.log(error)
+        }, 
+        
+        onSuccess: (data: any) => {   
+          if(!array) { 
+            if(isRefetching){
+              if(size === limit){
+                setResults(lodash.uniqBy(data?.data?.content, filter ? filter : "id")); 
+                // return
+              } else if(size !== limit){ 
+                  results.push(...data?.data?.content);   
+                  setResults(lodash.uniqBy(results, filter ? filter : "id")); 
+              } 
+            } else {
+              setResults(lodash.uniqBy(data?.data?.content, filter ? filter : "id")); 
+            }
+          } else { 
+            if(isRefetching){
+              if(size === limit){
+                setResults(lodash.uniqBy(data?.data, filter ? filter : "id")); 
+                // return
+              } else if(size !== limit){ 
+                  results.push(...data?.data);   
+                  setResults(lodash.uniqBy(results, filter ? filter : "id")); 
+              } 
+            } else {
+              setResults(lodash.uniqBy(data?.data, filter ? filter : "id")); 
+            }
+          }
+            setHasNextPage(data.data.last ? false:true);
+            window.scrollTo(0, window.innerHeight); 
+        //   setData(data.data.content);
+        }
+    })  
+    
+    
+
+    const ref = React.useCallback((post: any) => {
+        if (isLoading && isRefetching) return;
+        if (intObserver.current) intObserver.current.disconnect();
+        intObserver.current = new IntersectionObserver((posts) => {
+          if (posts[0].isIntersecting && hasNextPage && !isRefetching) {
+            setSize(prev => prev + limit); 
+            refetch() 
+          }
+        });
+        if (post) intObserver.current.observe(post);
+       }, [isLoading, hasNextPage, setSize, isRefetching]);
+
+    return {
+        data,
+        isLoading, 
+        refetch, 
+        results,
+        ref,
+        isRefetching
+    }
+}
+
+export default InfiniteScrollerComponent
