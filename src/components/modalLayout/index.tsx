@@ -38,7 +38,8 @@ export default function ModalLayout(props: Props) {
 
   return (
     <Modal size={size ? size : "md"} isCentered scrollBehavior="inside" isOpen={open} onClose={close}>
-      <ModalOverlay />
+      <ModalOverlay 
+        backdropFilter='blur(10px) hue-rotate(90deg)' />
       <ModalContent px={"0px"} bgColor={headercolor ? headercolor : "#0A1018"}>
         {!hide && (
           <>

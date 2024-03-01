@@ -126,7 +126,7 @@ function PlatformType(props: Props) {
                     </Grid>
                 </Box>
             </Box>
-            <ModalLayout headerIcon={<TvIcon />} size={"4xl"} title={"Nova Connect"}  open={open} close={setOpen} connect={true}  >
+            <ModalLayout headercolor='transparent' headerIcon={<TvIcon />} size={"4xl"} title={"Nova Connect"}  open={open} close={setOpen} connect={true}  >
                 <ModalContent />
             </ModalLayout>
         </Box>
