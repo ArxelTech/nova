@@ -48,6 +48,7 @@ function AddedTab(props: Props) {
             email: "@ajokhai"
         }
     ]
+    
 
     return (
         <Box  w={"full"} overflowY={"auto"} position={"relative"} display={"flex"} sx={{ flex: '1 0 auto' }} gap={"10px"} flexDirection={"column"}>
